@@ -1,0 +1,125 @@
+#fps {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 5px;
+  font-family: Roboto;
+	font-weight: 700;
+  font-size: 20px;
+}
+
+html,
+body,
+.wrapper {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+body {
+	background: url('http://i66.tinypic.com/feflf8.png');
+	background-position: center;
+	background-size: cover;
+	transition: all 0.8s;
+	position: relative;
+}
+
+.bgleft {background-position: left;}
+.bgright {background-position: right;}
+
+@media (min-width: 600px) {
+	body {background-repeat: no-repeat;}
+}
+
+.text p {
+	color: #fff;
+	font-size: 50px;
+	position: absolute;
+	top: 50%;
+  transform: translateY(-50%);
+	font-family: Roboto;
+	font-weight: 700;
+	padding: 30px;
+  transition: all 0.4s;
+}
+
+.text.left p {left: 3%;}
+.text.right p {right: 3%;}
+
+.left.slide p {left: -3%}
+.right.slide p {right: -6%}
+
+.left,
+.right {
+	cursor: pointer;
+	transition: all 0.4s;
+}
+
+.panel-left {
+	height: 100%;
+	width: 85%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #00d59a;
+	transform: translateX(-100%);
+	transition: all 0.4s;
+}
+
+.panel-left img {
+	transform: translateX(-70px);
+	transition: all 0.4s;
+	opacity: 0;
+}
+
+.panel-right img {
+	transform: translateX(-70px);
+	transition: all 0.4s;
+	opacity: 0;
+}
+
+.panel-right {
+	height: 100%;
+	width: 85%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #00a0fa;
+	transform: translateX(100%);
+	transition: all 0.4s;
+}
+
+.slide-to-right {transform: translateX(0);}
+.slide-to-left {transform: translateX(0);}
+
+.slide-to-right img {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.slide-to-left img {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.no-click {pointer-events: none;}
+
+h1 {
+	margin: 20px;
+	color: #fff;
+	font-family: Roboto;
+	font-weight: 700;
+}
+
+.draw {margin-top: -70px;}
